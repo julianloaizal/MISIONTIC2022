@@ -31,8 +31,19 @@ public class variante2 {
     
     public void comprarDatos(int c){
         double costoDatos;
-        if (c < 10){
+        if (c <= 10){
             costoDatos = double c * 3000;
+        } else if (10 < c && c<= 30){
+            costoDatos = double 30000 + 2500 * (c-10);
+        } else {
+            costoDatos = double 60000 + 1500 * (c-20);
+        }
+        
+        if (saldo < costoDatos){
+            
+        }else{
+            saldo = saldo - costoDatos;
+            saldoDatos = saldoDatos + c;
         }
         
         
